@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExploreCol — Plataforma de Servicios Turísticos</title>
+  <meta name="description" content="Descubre Colombia con ExploreCol. Los mejores paquetes turísticos del país." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#" data-page="home">
+        <div class="logo-icon">co</div>
+        ExploreCol
+      </a>
+      <div class="navbar-nav">
+        <a href="#" data-page="home" class="active"><span class="nav-icon">🏠</span> Inicio</a>
+        <a href="#" data-page="paquetes"><span class="nav-icon">🗺</span> Paquetes</a>
+        <a href="#" data-page="favoritos"><span class="nav-icon">♡</span> Favoritos</a>
+        <a href="#" data-page="contacto"><span class="nav-icon">📞</span> Contacto</a>
+        <a href="#" data-page="administrar"><span class="nav-icon">⚙</span> Administrar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       PÁGINA: HOME
+  ══════════════════════════════════════════ -->
+  <div id="page-home" class="page active">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Descubre la Magia de Colombia</h1>
+          <p>Vive experiencias únicas con nuestros paquetes turísticos diseñados para explorar los destinos más
+            increíbles de Colombia</p>
+          <div class="hero-btns">
+            <button class="btn btn-outline" style="background:white;color:#00A896;border-color:white;"
+              onclick="navegarA('paquetes')">Ver Paquetes</button>
+            <button class="btn btn-outline" onclick="navegarA('contacto')">Contactar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon verde">📍</div>
+            <h4>Destinos Únicos</h4>
+            <p>Los mejores lugares de Colombia</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon azul">🛡</div>
+            <h4>Seguridad Total</h4>
+            <p>Viaja con total tranquilidad</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon amarillo">⭐</div>
+            <h4>Calidad Garantizada</h4>
+            <p>Experiencias siempre increíbles</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon lila">🎧</div>
+            <h4>Soporte 24/7</h4>
+            <p>Siempre aquí para ayudarte</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paquetes Destacados -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Paquetes Destacados</h2>
+          <p>Descubre nuestros viajes más solicitados y vive experiencias inolvidables en los destinos más hermosos de
+            Colombia</p>
+        </div>
+        <div id="home-cards" class="cards-grid"></div>
+        <div style="text-align:center;margin-top:36px">
+          <button class="btn btn-primary" onclick="navegarA('paquetes')">Ver Todos los Paquetes</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="section" style="background:var(--gris-claro)">
+      <div class="container">
+        <div class="section-header">
+          <h2>Lo Que Dicen Nuestros Viajeros</h2>
+        </div>
+        <div class="testimonios-grid">
+          <div class="testimonio-card">
+            <div class="testimonio-stars">★★★★★</div>
+            <p class="testimonio-text">"La experiencia en Cartagena fue increíble. Todo estuvo perfectamente organizado
+              y el tour por las Islas del Rosario fue simplemente espectacular. ¡Totalmente recomendado!"</p>
+            <div class="testimonio-autor">
+              <div class="autor-avatar" style="background:#2E86C1">MC</div>
+              <div>
+                <div class="autor-nombre">Maria Camila</div>
+                <div class="autor-ciudad">Medellín</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonio-card">
+            <div class="testimonio-stars">★★★★★</div>
+            <p class="testimonio-text">"Mi Eje Cafetero superó todas mis expectativas. El tour por los fincas fue
+              educativo y delicioso. ¡Totalmente recomendado para todos!"</p>
+            <div class="testimonio-autor">
+              <div class="autor-avatar" style="background:#1E8449">JR</div>
+              <div>
+                <div class="autor-nombre">Juan Rodríguez</div>
+                <div class="autor-ciudad">Bogotá</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonio-card">
+            <div class="testimonio-stars">★★★★☆</div>
+            <p class="testimonio-text">"San Andrés es un paraíso. El mar de los siete colores es real y las tormentas de
+              lo que imaginaba. ExploreCol hizo todo perfecto."</p>
+            <div class="testimonio-autor">
+              <div class="autor-avatar" style="background:#7D3C98">AP</div>
+              <div>
+                <div class="autor-nombre">Andrea Pérez</div>
+                <div class="autor-ciudad">Cali</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <h2>¿Listo para tu Próxima Aventura?</h2>
+        <p>Contáctanos hoy y comienza a planear el viaje de tus sueños por Colombia</p>
+        <button class="btn btn-blanco" onclick="navegarA('contacto')">Contactar Ahora</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <div class="logo-icon">co</div>
+              <span class="footer-brand-name">ExploreCol</span>
+            </div>
+            <p>Tu mejor aliado para descubrir la magia de Colombia. Paquetes turísticos diseñados para que vivas
+              experiencias inolvidables.</p>
+          </div>
+          <div>
+            <h4>Enlaces Rápidos</h4>
+            <div class="footer-links">
+              <a href="#" data-page="home">Inicio</a>
+              <a href="#" data-page="paquetes">Paquetes</a>
+              <a href="#" data-page="favoritos">Favoritos</a>
+              <a href="#" data-page="contacto">Contacto</a>
+            </div>
+          </div>
+          <div>
+            <h4>Contacto</h4>
+            <div class="footer-contact">
+              <span>📞 +57 304 210 1188</span>
+              <span>📧 info@explorecol.com</span>
+              <span>📧 reservas@explorecol.com</span>
+              <span>📍 Centro Comercial Florida Local 122, Medellín, Colombia</span>
+            </div>
+          </div>
+          <div>
+            <h4>Síguenos</h4>
+            <div class="social-links">
+
+              <button class="social-btn" title="Facebook">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="20">
+              </button>
+
+              <button class="social-btn" title="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" width="20">
+              </button>
+
+              <button class="social-btn" title="Twitter">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" width="20">
+              </button>
+
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 ExploreCol. Todos los derechos reservados.</p>
+          <p>Diseñado con ♥ para descubrir Colombia</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PÁGINA: PAQUETES
+  ══════════════════════════════════════════ -->
+  <div id="page-paquetes" class="page">
+    <div class="container">
+      <div class="page-header">
+        <h1>Nuestros Paquetes Turísticos</h1>
+        <p>Explora nuestra selección de paquetes turísticos diseñados para que descubras lo mejor de Colombia</p>
+      </div>
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="buscador" placeholder="Busca por destino, ciudad o descripción..." />
+      </div>
+      <p id="paquetes-count" class="results-count"></p>
+      <div id="paquetes-cards" class="cards-grid"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="margin-top:60px">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <div class="logo-icon">co</div>
+              <span class="footer-brand-name">ExploreCol</span>
+            </div>
+            <p>Tu mejor aliado para descubrir la magia de Colombia.</p>
+          </div>
+          <div>
+            <h4>Enlaces Rápidos</h4>
+            <div class="footer-links">
+              <a href="#" data-page="home">Inicio</a>
+              <a href="#" data-page="paquetes">Paquetes</a>
+              <a href="#" data-page="favoritos">Favoritos</a>
+              <a href="#" data-page="contacto">Contacto</a>
+            </div>
+          </div>
+          <div>
+            <h4>Contacto</h4>
+            <div class="footer-contact">
+              <span>📞 +57 304 210 1188</span>
+              <span>📧 info@explorecol.com</span>
+              <span>📍 Centro Comercial Florida Local 122, Medellín</span>
+            </div>
+          </div>
+          <div>
+            <h4>Síguenos</h4>
+            <div class="social-links">
+              <button class="social-btn" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+              <button class="social-btn" title="Instagram">
+                <i class="fab fa-instagram"></i>
+              </button>
+              <button class="social-btn" title="Twitter">
+                <i class="fab fa-twitter"></i>
+              </button>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2026 ExploreCol. Todos los derechos reservados.</p>
+          </div>
+        </div>
+    </footer>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PÁGINA: DETALLE
+  ══════════════════════════════════════════ -->
+  <div id="page-detalle" class="page">
+    <div class="container">
+      <a class="detalle-back" href="#" onclick="navegarA('paquetes');return false;">← Volver a Paquetes</a>
+      <div class="detalle-layout">
+        <!-- Imagen -->
+        <div>
+          <div class="detalle-imagen">
+            <img id="detalle-img" src="" alt="" />
+            <span id="detalle-badge" class="detalle-badge"></span>
+          </div>
+        </div>
+        <!-- Info -->
+        <div class="detalle-info">
+          <h1 id="detalle-nombre"></h1>
+          <div class="detalle-meta">
+            <span id="detalle-ubicacion"></span>
+            <span id="detalle-duracion"></span>
+          </div>
+          <p id="detalle-desc" class="detalle-desc"></p>
+
+          <div class="precio-box">
+            <div>
+              <div class="precio-label">Precio por persona</div>
+              <div id="detalle-precio" class="precio-monto"></div>
+            </div>
+            <button id="btn-fav-detalle" class="btn-fav-detalle">♡</button>
+          </div>
+
+          <div class="detalle-acciones">
+            <button id="btn-reservar" class="btn btn-primary">Reservar Ahora</button>
+            <button id="btn-compartir" class="btn-share" title="Compartir">🔗</button>
+          </div>
+
+          <div class="detalle-seccion" style="margin-bottom:20px">
+            <h3>¿Qué Incluye?</h3>
+            <div id="detalle-incluye" class="incluye-lista"></div>
+          </div>
+
+          <div class="detalle-seccion">
+            <h3>Destacados del Tour</h3>
+            <div id="detalle-destacados" class="incluye-lista"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PÁGINA: FAVORITOS
+  ══════════════════════════════════════════ -->
+  <div id="page-favoritos" class="page">
+    <div class="container">
+      <div class="page-header">
+        <h1>Mis Favoritos</h1>
+        <p>Paquetes que has guardado para explorar después</p>
+      </div>
+      <div id="favoritos-lista"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PÁGINA: CONTACTO
+  ══════════════════════════════════════════ -->
+  <div id="page-contacto" class="page">
+    <div class="container">
+      <div class="page-header" style="text-align:center;border:none;margin-bottom:0">
+        <h1>Contáctanos</h1>
+        <p>¿Tienes preguntas? Estamos aquí para ayudarte a planear tu próxima aventura</p>
+      </div>
+      <div class="contacto-layout">
+        <!-- Info -->
+        <div class="contacto-info">
+          <div class="info-card">
+            <div class="info-icon verde">📞</div>
+            <div>
+              <div class="info-label">Teléfono</div>
+              <div class="info-valor">+57 304 210 1188</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon azul">📧</div>
+            <div>
+              <div class="info-label">Correo Electrónico</div>
+              <div class="info-valor">info@explorecol.com<br>reservas@explorecol.com</div>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon lila">📍</div>
+            <div>
+              <div class="info-label">Dirección</div>
+              <div class="info-valor">Centro Comercial Florida<br>Local 122, Medellín, Colombia</div>
+            </div>
+          </div>
+          <div class="horario-box">
+            <h4>Horario de Atención</h4>
+            <p>
+              Lunes a Viernes: 8:00 AM – 6:00 PM<br>
+              Sábados: 9:00 AM – 2:00 PM<br>
+              Domingos y Festivos: Cerrado
+            </p>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <div>
+          <div id="contacto-success" class="success-alert">
+            ✓ ¡Mensaje enviado correctamente! Te contactaremos a la brevedad posible.
+          </div>
+          <form id="form-contacto" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="c-nombre">Nombre Completo <span class="req">*</span></label>
+              <input type="text" id="c-nombre" placeholder="Tu nombre completo" autocomplete="name" />
+              <span class="error-msg" id="err-nombre">El nombre debe tener al menos 3 caracteres.</span>
+            </div>
+            <div class="form-group">
+              <label for="c-email">Correo Electrónico <span class="req">*</span></label>
+              <input type="email" id="c-email" placeholder="tu@email.com" autocomplete="email" />
+              <span class="error-msg" id="err-email">Ingresa un correo electrónico válido.</span>
+            </div>
+            <div class="form-group">
+              <label for="c-telefono">Teléfono <span class="req">*</span></label>
+              <input type="tel" id="c-telefono" placeholder="+57 300 123 4567" autocomplete="tel" />
+              <span class="error-msg" id="err-telefono">Ingresa un número de teléfono válido.</span>
+            </div>
+            <div class="form-group">
+              <label for="c-asunto">Asunto <span class="req">*</span></label>
+              <input type="text" id="c-asunto" placeholder="¿En qué podemos ayudarte?" />
+              <span class="error-msg" id="err-asunto">El asunto debe tener al menos 5 caracteres.</span>
+            </div>
+            <div class="form-group">
+              <label for="c-mensaje">Mensaje <span class="req">*</span></label>
+              <textarea id="c-mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+              <span class="error-msg" id="err-mensaje">El mensaje debe tener al menos 20 caracteres.</span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">✈ Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="margin-top:60px">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <div class="logo-icon">co</div><span class="footer-brand-name">ExploreCol</span>
+            </div>
+            <p>Tu mejor aliado para descubrir la magia de Colombia.</p>
+          </div>
+          <div>
+            <h4>Enlaces Rápidos</h4>
+            <div class="footer-links"><a href="#" data-page="home">Inicio</a><a href="#"
+                data-page="paquetes">Paquetes</a><a href="#" data-page="favoritos">Favoritos</a><a href="#"
+                data-page="contacto">Contacto</a></div>
+          </div>
+          <div>
+            <h4>Contacto</h4>
+            <div class="footer-contact"><span>📞 +57 304 210 1188</span><span>📧 info@explorecol.com</span></div>
+          </div>
+          <div>
+            <h4>Síguenos</h4>
+            <div class="social-links"><button class="social-btn">f</button><button class="social-btn">ig</button><button
+                class="social-btn">tw</button></div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 ExploreCol. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       PÁGINA: ADMINISTRAR
+  ══════════════════════════════════════════ -->
+  <div id="page-administrar" class="page">
+    <div class="container">
+      <div class="admin-header">
+        <div>
+          <h1>Administrar Paquetes</h1>
+          <p>Gestiona los paquetes turísticos del sistema</p>
+        </div>
+        <button id="btn-nuevo-paquete" class="btn btn-primary">+ Nuevo Paquete</button>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-icon" style="background:#EBF8FF">📦</div>
+          <div>
+            <div id="stat-total" class="stat-num">0</div>
+            <div class="stat-label">Total Paquetes</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon" style="background:var(--verde-light)">⭐</div>
+          <div>
+            <div id="stat-dest" class="stat-num">0</div>
+            <div class="stat-label">Destacados</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon" style="background:#FAF5FF">📋</div>
+          <div>
+            <div id="stat-reg" class="stat-num">0</div>
+            <div class="stat-label">Regulares</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabla -->
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Paquete</th>
+              <th>Ubicación</th>
+              <th>Duración</th>
+              <th>Precio</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="admin-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       MODAL: NUEVO PAQUETE
+  ══════════════════════════════════════════ -->
+  <div id="modal-nuevo" class="modal-overlay">
+    <div class="modal">
+      <button id="modal-close" class="modal-close">✕</button>
+      <h2>➕ Nuevo Paquete Turístico</h2>
+      <form id="form-nuevo" class="contact-form" novalidate>
+        <div class="form-group">
+          <label>Nombre del paquete <span class="req">*</span></label>
+          <input type="text" id="n-nombre" placeholder="Ej: Tour Amazonas" required />
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div class="form-group">
+            <label>Ubicación <span class="req">*</span></label>
+            <input type="text" id="n-ubicacion" placeholder="Ciudad, Departamento" required />
+          </div>
+          <div class="form-group">
+            <label>Duración <span class="req">*</span></label>
+            <input type="text" id="n-duracion" placeholder="Ej: 3 días / 2 noches" required />
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div class="form-group">
+            <label>Precio (COP) <span class="req">*</span></label>
+            <input type="number" id="n-precio" placeholder="Ej: 1500000" min="0" required />
+          </div>
+          <div class="form-group">
+            <label>Categoría</label>
+            <select id="n-categoria">
+              <option value="Cultural">Cultural</option>
+              <option value="Naturaleza">Naturaleza</option>
+              <option value="Playa">Playa</option>
+              <option value="Aventura">Aventura</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Descripción <span class="req">*</span></label>
+          <textarea id="n-desc" placeholder="Describe brevemente el paquete..." style="min-height:80px"
+            required></textarea>
+        </div>
+        <div class="form-group">
+          <label>URL de imagen</label>
+          <input type="url" id="n-imagen" placeholder="https://... (opcional)" />
+        </div>
+        <div class="form-group" style="flex-direction:row;align-items:center;gap:10px">
+          <input type="checkbox" id="n-destacado" style="width:18px;height:18px" />
+          <label for="n-destacado" style="margin:0">Marcar como paquete destacado</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">✓ Guardar Paquete</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       TOAST
+  ══════════════════════════════════════════ -->
+  <div id="toast" class="toast"></div>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
