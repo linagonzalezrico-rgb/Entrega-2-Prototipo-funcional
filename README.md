@@ -105,21 +105,17 @@ explorecol/
 
 El proyecto está desplegado en: **[URL del despliegue aquí]**
 
-Opciones gratuitas para desplegar:
-- [GitHub Pages](https://pages.github.com/)
-- [Netlify](https://netlify.com)
-- [Vercel](https://vercel.com)
 
----
+
 
 ## 👤 Autor
 
 | Campo | Valor |
 |-------|-------|
-| Nombre | [Tu nombre completo] |
-| Programa | [Tu programa académico] |
-| Institución | [Tu institución] |
-| Tutor | John Olarte Ramos |
+| Nombre | Lina Paola Gonzalez Rico. |
+| Programa | Ingenieria de Software |
+| Institución | Politecnico Gran Colombiano |
+| Tutor | Edgar Mauricio López Rojas |
 | Módulo | Desarrollo de Front-end |
 | Entrega | Prototipo funcional — Semana 5 |
 | Fecha | Marzo 2026 |
