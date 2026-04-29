@@ -103,7 +103,7 @@ explorecol/
 
 ## 📦 Despliegue
 
-El proyecto está desplegado en: **[URL del despliegue aquí]**
+El proyecto está desplegado en: explorecol.netlify.app
 
 
 
